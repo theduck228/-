@@ -1,0 +1,214 @@
+@title-font: 'Cormorant', sans-serif;
+@main_color:#1E2839;
+@btn_color:#EABD53;
+@text_color:#916A4E;
+@bg_color-beige:#F7F4F1;
+@bg_color-white:#FFFFFF;
+@hover_color: #DCBDA1;
+@green_before: #13C32F;
+
+html,
+body{
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: #1E2839;
+  background-color: @bg_color-beige;
+}
+.wrapper{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: @bg_color-beige;
+}
+main{
+  display: inherit;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  flex: 1 1 auto ;
+  background-color: @bg_color-beige;
+}
+.main-wrapper{
+  width: 100%;
+  height: 100%;
+}
+h1{
+  font-size: 60px;
+  text-transform: uppercase;
+  font-family: @title-font;
+}
+h2{
+  font-size: 48px;
+  text-transform: uppercase;
+  font-family: @title-font;
+}
+h3{
+  font-size: 40px;
+  text-transform: uppercase;
+  font-family: @title-font;
+}
+h4{
+  color: @main_color;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+h5{
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: @title-font;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.18px;
+}
+h6{
+  font-size: 15px;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.3px;
+}
+span{
+  font-weight: 600;
+}
+button {
+  height: 70px;
+  gap: 10px;
+  border-radius: 40px;
+  box-shadow: 0 6px 10px 0 rgba(65, 45, 30, 0.10);
+  border: none;
+  background-color: @btn_color;
+  color: @bg_color-white;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 150%;
+  padding: 16px 40px;
+  cursor: pointer;
+}
+.header-container{
+  display: flex;
+  flex-direction: column;
+  h3{
+    margin-bottom: 0;
+  }
+  p{
+    font-size: 24px;
+    font-weight: 300;
+  }
+  &:after{
+    content: url("../images/page-decor-line-alternate.png");
+    width: 100%;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+}
+.reg-form{
+  width: 70%;
+  padding: 90px 60px;
+  background-color: @main_color;
+  height: 540px;
+  border-radius: 60px;
+  &__container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    &:before{
+      content: url("../images/container-decor-before.png");
+    }
+    &:after{
+      content: url("../images/container-decor-after.png");
+    }
+  }
+  &__content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    h2{
+      color: @bg_color-white;
+      text-align: center;
+      width: 100%;
+      margin: 0;
+    }
+    p{
+      color: @bg_color-white;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 180%;
+      margin: 0;
+    }
+    input{
+      background-color: #f7f9fb;
+      height: 28px;
+      width: 100%;
+      border-radius: 40px;
+      padding: 16px 30px;
+      border: none;
+      font-size: 16px;
+      color: #C4C4C4;
+      &::placeholder{
+        border: none;
+        font-size: 16px;
+        color: #C4C4C4;
+      }
+      &:focus{
+        border: none;
+        font-size: 16px;
+        color: #C4C4C4;
+      }
+    }
+    textarea{
+      resize: none;
+      padding: 30px;
+      color: #C4C4C4;
+      width: 100%;
+      border-radius: 40px;
+      height: 40%;
+      &::placeholder{
+        border: none;
+        font-size: 16px;
+        color: #C4C4C4;
+      }
+      &:focus{
+        border: none;
+        font-size: 16px;
+        color: #C4C4C4;
+      }
+    }
+  }
+}
+.scroll-up{
+  background: url("../images/scroll-up.svg") no-repeat;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  width: 20px !important;
+  height: 40px !important;
+  border: none !important;
+  box-shadow: none !important;
+  opacity: 0.5;
+}
+.scroll-btn{
+  cursor: pointer;
+}
+
+
+@import "modules/header/header";
+@import "modules/footer/footer";
+@import "modules/catalog/catalog";
+@import "modules/materials/materials";
+@import "modules/quality/quality";
+@import "modules/about-us/about-us";
+@import "modules/our-objects/our-objects";
+@import "modules/specialisation/specialisation";
+@import "modules/company/company";
+@import "modules/pop_ups/pop_ups";

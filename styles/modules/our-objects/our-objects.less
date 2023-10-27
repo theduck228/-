@@ -1,0 +1,154 @@
+.main-objects{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: @bg_color-white;
+  padding: 100px 0;
+  align-items: center;
+  justify-content: center;
+}
+.objects{
+  &__container{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__new-object{
+    width: 100%;
+    max-height: 300px;
+    &-content{
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        p{
+          width: 70%;
+          font-size: 18px;
+          font-weight: 300;
+          line-height: 180%;
+          color: @bg_color-white;
+          text-align: center;
+          margin-bottom: 30px;
+        }
+        .btn-white{
+          background-color: @bg_color-white;
+          a:any-link{
+            color: @main_color;
+          }
+        }
+        .btn-default{
+          a:any-link{
+            color: @bg_color-white;
+          }
+        }
+        .btn-whatsup{
+          &:after{
+            content: url("../images/whatsapp-black.svg");
+          }
+        }
+        .btn-tg{
+          &:after{
+            content: url("../images/telegram-black.svg");
+          }
+        }
+      }
+    }
+    &-btn{
+      font-size: 16px;
+      min-width: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      a:any-link{
+        width: 90%;
+        text-wrap: none;
+        text-decoration: none;
+      }
+      &-container{
+        display: flex;
+        gap: 20px;
+      }
+    }
+    &-wrapper{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__our-objects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 110%;
+    
+    h2{
+      text-align: center;
+      margin-top: 100px;
+      &:after{
+        margin-bottom: 20px;
+      }
+    }
+    &-wrapper{
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px;
+    }
+    &-item{
+      width: 100%;
+      border-radius: 18px;
+      border: 1px solid @hover_color;
+      background-color: @bg_color-beige;
+      img{
+        width: 100%;
+      }
+      &-name-container{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 0 20px 0;
+        height: 30px;
+        background-color: @bg_color-beige;
+        border-radius: 0 0 18px 18px;
+        h4{
+          font-weight: 500;
+          font-family: 'Inter', sans-serif;
+          line-height: 130%;
+          text-transform: capitalize;
+          margin-left: 20px;
+          width: 80%;
+        }
+        p{
+          color: @text_color;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 120%;
+          display: flex;
+          width: 20%;
+          margin-right: 30px;
+          align-items: center;
+          &:before{
+            content: url("../images/location.svg");
+            height: 100%;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+  &__more-objects{
+    margin-top: 50px;
+  }
+}

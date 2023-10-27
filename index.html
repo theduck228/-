@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Русское ремесло</title>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ff3e42b5-f180-4175-85a1-17f57513e423&lang=ru_RU" type="text/javascript"></script>
+    <script src="src/map.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header-wrapper">
+                <div class="header-navigation">
+                    <div class="header-navigation__upper-nav">
+                        <img src="images/logo.png" alt="">
+                        <div class="header-navigation__nav-main">
+                            <div class="header-navigation__nav-main-content">
+                                <div class="header-navigation__nav-main-title">
+                                    <p>Художественное православное столярное производство</p>
+                                </div>
+                                <div class="header-navigation__nav-main-ask">
+                                    <p>Спрашивайте <br>онлайн:</p>
+                                    <img src="images/whatsup-icon.svg" alt="">
+                                    <img src="images/telegram-icon.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="header-navigation__upper-nav-container">
+                                <div class="header-navigation__upper-nav-item">
+                                    <h6 class="scroll-btn btn-company">О компании</h6>
+                                </div>
+                                <div class="header-navigation__upper-nav-item">
+                                    <h6 class="scroll-btn btn-production">Мебельное производство</h6>
+                                </div>
+                                <div class="header-navigation__upper-nav-item">
+                                    <h6 class="scroll-btn btn-objects">Наши объекты</h6>
+                                </div>
+                                <div class="header-navigation__upper-nav-item">
+                                    <h6 class="scroll-btn btn-contacts">Контакты</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-navigation__contacts">
+                            <div class="header-navigation__contacts-item item-time"><p>Ежедневно с 09:00 до 22:00</p></div>
+                            <div class="header-navigation__contacts-item item-mail"><p>zakaz@rusremeslo.ru</p></div>
+                            <div class="header-navigation__contacts-item item-phone"><p>+7 (495) 104 85 95</p></div>
+                            <div class="header-navigation__contacts-item item-order_callback"><p id="feedback-pop-up-opener">Заказать обратный звонок</p></div>
+                        </div>
+                    </div>
+                    <div class="header-navigation__lower-nav">
+                        <div class="header-navigation__lower-nav-container">
+                            <nav>
+                                <div class="header-navigation__lower-nav-item">
+                                    <h5>Иконостасы</h5>
+                                </div>
+                                <div class="header-navigation__lower-nav-item">
+                                    <h5>мебель в алтарь</h5>
+                                </div>
+                                <div class="header-navigation__lower-nav-item">
+                                    <h5>двери</h5>
+                                </div>
+                                <div class="header-navigation__lower-nav-item">
+                                    <h5>церковная мебель</h5>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-body">
+                    <h1 class="header-body__head-title">иконостасы, алтари и Предметы церковного интерьера на заказ</h1>
+                    <div class="header-body__btn-container">
+                        <button class="header-body__btn-consult btn-type-1" id="consult-pop-up-opener">Получить консультацию</button>
+                        <button class="header-body__btn-project btn-type-2">Прислать архитектурный проект</button>
+                    </div>
+                    <div class="header-body__advances">
+                        <div class="header-body__advances-item">
+                            <div class="header-body__advances-item-text item-1">
+                                <img src="images/production-icon.svg" alt="">
+                                <p><span>Собственное производство</span> площадью 2500 м² </p>
+                            </div>
+                        </div>
+                        <div class="header-body__advances-item">
+                            <div class="header-body__advances-item-text item-2">
+                                <img src="images/delivery-icon.svg" alt="">
+                                <p>Производство "под ключ" <span>с доставкой и монтажом</span> </p>
+                            </div>
+                        </div>
+                        <div class="header-body__advances-item">
+                            <div class="header-body__advances-item-text item-3">
+                                <img src="images/book-icon.svg" alt="">
+                                <p>Соблюдение православных <span>канонов    и традиций </span></p>
+                            </div>
+                        </div>
+                        <div class="header-body__advances-item">
+                            <div class="header-body__advances-item-text item-4">
+                                <img src="images/tomb-icon.svg" alt="">
+                                <p><span>Воссоздание объектов</span> культурного наследия</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="main-wrapper">
+                <div class="main-catalog">
+                    <div class="main-catalog__head-product">
+                        <h3 class="main-catalog__head-product-header">Что мы предлагаем</h3>
+                        <div class="main-catalog__head-product-container card-container">
+                            <div class="main-catalog__head-product-card catalog-card iconostasis">
+                                <img src="images/iconostasis.png" alt="" class="main-catalog__card-image">
+                                <p class="main-catalog__card-image-name">Иконостасы</p>
+                            </div>
+                            <div class="main-catalog__head-product-card catalog-card tsar_gate">
+                                <img src="images/tsar-gate.png" alt="" class="main-catalog__card-image">
+                                <p class="main-catalog__card-image-name">Царские врата</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-catalog__altar">
+                        <h3>Алтарь</h3>
+                        <div class="main-catalog__altar-container card-container">
+                            <div class="main-catalog__card catalog-card">
+                                <img src="images/altar.png" alt="" class="main-catalog__card-image">
+                                <p class="main-catalog__card-image-name">Жертвенник</p>
+                            </div>
+                            <div class="main-catalog__card catalog-card">
+                                <img src="images/throne.png" alt="" class="main-catalog__card-image">
+                                <p class="main-catalog__card-image-name">Трон</p>
+                            </div>
+                            <div class="main-catalog__card catalog-card">
+                                <img src="images/heaven_place.png" alt="" class="main-catalog__card-image">
+                                <p class="main-catalog__card-image-name">Горнее место</p>
+                            </div>
+                            <div class="main-catalog__card catalog-card">
+                                <img src="images/seat.png" alt="" class="main-catalog__card-image">
+                                <p class="main-catalog__card-image-name">Седалище</p>
+                            </div>
+                            <div class="main-catalog__card catalog-card com-table">
+                                <img src="images/communion_table.png" alt="" class="main-catalog__card-image">
+                                <p class="main-catalog__card-image-name">Престол</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-catalog__doors">
+                        <h3>Двери</h3>
+                        <div class="main-catalog__doors-container card-container">
+                            <div class="main-catalog__card catalog-card door-1">
+                                <img src="images/door-1.png" alt="" class="main-catalog__card-image">
+                            </div>
+                            <div class="main-catalog__card catalog-card">
+                                <img src="images/door-2.png" alt="" class="main-catalog__card-image">
+                            </div>
+                            <div class="main-catalog__card catalog-card">
+                                <img src="images/door-3.png" alt="" class="main-catalog__card-image">
+                            </div>
+                            <div class="main-catalog__card catalog-card">
+                                <img src="images/door-4.png" alt="" class="main-catalog__card-image">
+                            </div>
+                            <div class="main-catalog__card catalog-card">
+                                <img src="images/door-5.png" alt="" class="main-catalog__card-image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-catalog__church-furniture">
+                        <h3>Церковная мебель</h3>
+                        <div class="main-catalog__church-furniture-container card-container">
+                            <div class="main-catalog__card catalog-card lectern">
+                                <img src="images/lecterns.png" alt="" class="main-catalog__card-image">
+                                <p class="main-catalog__card-image-name">Аналои</p>
+                            </div>
+                            <div class="main-catalog__card catalog-card icon-case">
+                                <img src="images/icon%20cases.png" alt="" class="main-catalog__card-image">
+                                <p class="main-catalog__card-image-name">Киоты навесные и напольные</p>
+                            </div>
+                            <div class="main-catalog__card catalog-card stasidia">
+                                <img src="images/stasidias.png" alt="" class="main-catalog__card-image">
+                                <p class="main-catalog__card-image-name">Стасидии</p>
+                            </div>
+                            <div class="main-catalog__card catalog-card bench">
+                                <img src="images/bench.png" alt="" class="main-catalog__card-image">
+                                <p class="main-catalog__card-image-name">Скамьи</p>
+                            </div>
+                            <div class="main-catalog__card catalog-card candle-box">
+                                <img src="images/candle-box.png" alt="" class="main-catalog__card-image">
+                                <p class="main-catalog__card-image-name">Свечные ящики</p>
+                            </div>
+                            <div class="main-catalog__card catalog-card reliquary">
+                                <img src="images/reliquary.png" alt="" class="main-catalog__card-image">
+                                <p class="main-catalog__card-image-name">Мощевики / ковчеги</p>
+                            </div>
+                            <div class="main-catalog__card catalog-card cabinets">
+                                <img src="images/cabinets.png" alt="" class="main-catalog__card-image">
+                                <p class="main-catalog__card-image-name">Тумбы</p>
+                            </div>
+                            <div class="main-catalog__card catalog-card eves">
+                                <img src="images/eves.png" alt="" class="main-catalog__card-image">
+                                <p class="main-catalog__card-image-name">Кануны</p>
+                            </div>
+                            <div class="main-catalog__card catalog-card tombs">
+                                <img src="images/tombs.png" alt="" class="main-catalog__card-image">
+                                <p class="main-catalog__card-image-name">Гробницы</p>
+                            </div>
+                            <div class="main-catalog__card catalog-card others">
+                                <img src="images/others.png" alt="" class="main-catalog__card-image">
+                                <p class="main-catalog__card-image-name">Прочая мебель</p>
+                            </div>
+                            <div class="main-catalog__card catalog-card crosses">
+                                <img src="images/crosses.png" alt="" class="main-catalog__card-image">
+                                <p class="main-catalog__card-image-name">Кресты-голгофы и кресты поклонные</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-objects">
+                <div class="objects__container">
+                    <div class="objects__new-object-wrapper">
+                        <div class="objects__new-object reg-form">
+                            <div class="objects__new-object-container reg-form__container">
+                                <div class="objects__new-object-content reg-form__content">
+                                    <div class="objects__new-object-content-wrapper">
+                                        <h2>у вас есть готовый архитектурный проект?</h2>
+                                        <p>Отправьте нам макет в WhatsApp или Telegram - мы просчитаем Вам стоимость и пришлем предложение</p>
+                                        <div class="objects__new-object-btn-container">
+                                            <button class="objects__new-object-btn btn-white btn-whatsup"><a href="#">Написать в WhatsApp</a></button>
+                                            <button class="objects__new-object-btn btn-white btn-tg"><a href="#">Написать в Telegram</a></button>
+                                            <button class="objects__new-object-btn btn-default"><a href="#">Отправить на почту</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="objects__our-objects" id="scroll-to-objects">
+                            <h2 class="header-container">наши объекты</h2>
+                            <div class="objects__our-objects-wrapper">
+                                <div class="objects__our-objects-item">
+                                    <img src="images/geoge_church.png" alt="">
+                                    <div class="objects__our-objects-item-name-container">
+                                        <h4>Храм Георгия Победоносца</h4>
+                                        <p>пос.Пальцо, Брянский район</p>
+                                    </div>
+                                </div>
+                                <div class="objects__our-objects-item">
+                                    <img src="images/basmannaya_chapel.png" alt="">
+                                    <div class="objects__our-objects-item-name-container">
+                                        <h4>Часовня на Басманной</h4>
+                                        <p>Московская обл.</p>
+                                    </div>
+                                </div>
+                                <div class="objects__our-objects-item">
+                                    <img src="images/DSK_chapel.png" alt="">
+                                    <div class="objects__our-objects-item-name-container">
+                                        <h4>Часовня ДСК</h4>
+                                        <p>Псковская область</p>
+                                    </div>
+                                </div>
+                                <div class="objects__our-objects-item">
+                                    <img src="images/church_of_mother_Matrona.png" alt="">
+                                    <div class="objects__our-objects-item-name-container">
+                                        <h4>Храм Преподобной матушки Матроны</h4>
+                                        <p>Псковская область</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="objects__more-objects">смотреть другие объекты</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-specialisation">
+                <div class="specialisation__container mixer">
+                    <div class="specialisation__header header-container">
+                        <h3>Наша особая специализация</h3>
+                        <p>художественная реставрация и воссоздание объектов культурного наследия</p>
+                    </div>
+                    <div class="specialisation__content mixer__container">
+                        <div class="specialisation__btn-container mixer__btns">
+                            <button type="button" class="mixer__btn" data-filter=".category-a">Реставрация</button>
+                            <button type="button" class="mixer__btn" data-filter=".category-b">Реставрация</button>
+                            <button type="button" class="mixer__btn" data-filter=".category-c">Реставрация</button>
+                            <button type="button" class="mixer__btn" data-filter=".category-d">Реставрация</button>
+                            <button type="button" class="mixer__btn" data-filter=".category-e">Реставрация</button>
+                        </div>
+                        <div class="mixer__data specialisation__reference-data" id="mixer">
+                            <div class="index mix category-a specialisation__reference-data-card mixer__card" data-order="1">
+                                <div class="specialisation__reference-data-card-images">
+                                    <img src="images/restoration-example-1.png" alt="">
+                                    <img src="images/restoration-example-2.png" alt="">
+                                </div>
+                                <h3 class="specialisation__reference-data-card-subheader">Реставрация Иконостаса церкви Троицы Живоначальной</h3>
+                                <p class="specialisation__reference-data-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
+                                    <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut,</p>
+                            </div>
+                            <div class="mix category-b specialisation__reference-data-card mixer__card" data-order="1" >
+                                <div class="specialisation__reference-data-card-images">
+                                    <img src="images/restoration-example-1.png" alt="">
+                                    <img src="images/restoration-example-2.png" alt="">
+                                </div>
+                                <h3 class="specialisation__reference-data-card-subheader">Реставрация Иконостаса церкви Троицы Живоначальной</h3>
+                                <p class="specialisation__reference-data-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
+                                    <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut,</p>
+                            </div>
+                            <div class="mix category-c specialisation__reference-data-card mixer__card" data-order="3">
+                                <div class="specialisation__reference-data-card-images">
+                                    <img src="images/restoration-example-1.png" alt="">
+                                    <img src="images/restoration-example-2.png" alt="">
+                                </div>
+                                <h3 class="specialisation__reference-data-card-subheader">Реставрация Иконостаса церкви Троицы Живоначальной</h3>
+                                <p class="specialisation__reference-data-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
+                                    <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut,</p>
+                            </div>
+                            <div class="mix category-d specialisation__reference-data-card mixer__card" data-order="4">
+                                <div class="specialisation__reference-data-card-images">
+                                    <img src="images/restoration-example-1.png" alt="">
+                                    <img src="images/restoration-example-2.png" alt="">
+                                </div>
+                                <h3 class="specialisation__reference-data-card-subheader">Реставрация Иконостаса церкви Троицы Живоначальной</h3>
+                                <p class="specialisation__reference-data-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
+                                    <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut,</p>
+                            </div>
+                            <div class="mix category-e specialisation__reference-data-card mixer__card" data-order="5">
+                                <div class="specialisation__reference-data-card-images">
+                                    <img src="images/restoration-example-1.png" alt="">
+                                    <img src="images/restoration-example-2.png" alt="">
+                                </div>
+                                <h3 class="specialisation__reference-data-card-subheader">Реставрация Иконостаса церкви Троицы Живоначальной</h3>
+                                <p class="specialisation__reference-data-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
+                                    <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut,</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-materials">
+                <div class="main-materials__container">
+                    <div class="main-materials__usage">
+                        <h3 class="header-container">используемые материалы</h3>
+                        <div class="main-materials__usage-types">
+                            <div class="main-materials__usage-types_upper-row">
+                                <div class="main-materials__usage-types-card upper">
+                                    <img src="images/wood-massive.png" alt="">
+                                    <p>Массив дерева</p>
+                                </div>
+                                <div class="main-materials__usage-types-card upper">
+                                    <img src="images/shpon.png" alt="">
+                                    <p>Шпон</p>
+                                </div>
+                                <div class="main-materials__usage-types-card upper">
+                                    <img src="images/MDF.png" alt="">
+                                    <p>МДФ</p>
+                                </div>
+                                <div class="main-materials__usage-types-card upper">
+                                    <img src="images/fanera.png" alt="">
+                                    <p>Фанера</p>
+                                </div>
+                            </div>
+                            <div class="main-materials__usage-types_lower-row">
+                                <div class="main-materials__usage-types-card">
+                                    <img src="images/copper.png" alt="">
+                                    <p>Латунь/медь</p>
+                                </div>
+                                <div class="main-materials__usage-types-card">
+                                    <img src="images/barkhat.png" alt="">
+                                    <p>Алькантара/бархат</p>
+                                </div>
+                                <div class="main-materials__usage-types-card">
+                                    <img src="images/stone.png" alt="">
+                                    <p>Камень</p>
+                                </div>
+                                <div class="main-materials__usage-types-card">
+                                    <img src="images/glass.png" alt="">
+                                    <p>Стекло</p>
+                                </div>
+                                <div class="main-materials__usage-types-card">
+                                    <img src="images/vitrage.png" alt="">
+                                    <p>Витражные вставки</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-materials__finish">
+                        <div class="main-materials__finish-header header-container">
+                            <h3>Варианты отделки</h3>
+                            <p>Любой уровень сложности</p>
+                        </div>
+                        <div class="main-materials__finish-variants">
+                            <div class="main-materials__finish-variants-card">
+                                <img src="images/golden.png" alt="">
+                                <p>Золочение</p>
+                            </div>
+                            <div class="main-materials__finish-variants-card">
+                                <img src="images/potal.png" alt="">
+                                <p>Поталь (золото, серебро)</p>
+                            </div>
+                            <div class="main-materials__finish-variants-card">
+                                <img src="images/RAL.png" alt="">
+                                <p>Эмаль RAL</p>
+                            </div>
+                            <div class="main-materials__finish-variants-card">
+                                <img src="images/patina.png" alt="">
+                                <p>Патина</p>
+                            </div>
+                            <div class="main-materials__finish-variants-card">
+                                <img src="images/basma.png" alt="">
+                                <p>Басма</p>
+                            </div>
+                            <div class="main-materials__finish-variants-card">
+                                <img src="images/morilka.png" alt="">
+                                <p>Отделка лаком/морилкой</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-materials__wood">
+                        <div class="main-materials__wood-type-header header-container">
+                            <h3>Качественные и экологически чистые материалы</h3>
+                            <p>Лучших европейских производителей</p>
+                        </div>
+                        <div class="main-materials__wood-types">
+                            <div class="main-materials__wood-types-item">
+                                <img src="images/dub.png" alt="">
+                                <p>Дуб</p>
+                            </div>
+                            <div class="main-materials__finish-variants-item">
+                                <img src="images/oreh.png" alt="">
+                                <p>Орех</p>
+                            </div>
+                            <div class="main-materials__finish-variants-item">
+                                <img src="images/listvenica.png" alt="">
+                                <p>Лиственница</p>
+                            </div>
+                            <div class="main-materials__finish-variants-item">
+                                <img src="images/byk.png" alt="">
+                                <p>Бук</p>
+                            </div>
+                            <div class="main-materials__finish-variants-item">
+                                <img src="images/Sapele.png" alt="">
+                                <p>Сапеле</p>
+                            </div>
+                            <div class="main-materials__finish-variants-item">
+                                <img src="images/palisandr.png" alt="">
+                                <p>Палисандр</p>
+                            </div>
+                            <div class="main-materials__finish-variants-item">
+                                <img src="images/kedr.png" alt="">
+                                <p>Кедр</p>
+                            </div>
+                            <div class="main-materials__finish-variants-item">
+                                <img src="images/krasnoe%20derevo.png" alt="">
+                                <p>Красное дерево</p>
+                            </div>
+                            <div class="main-materials__finish-variants-item">
+                                <img src="images/yasen.png" alt="">
+                                <p>Ясень</p>
+                            </div>
+                            <div class="main-materials__finish-variants-item">
+                                <img src="images/tik%20.png" alt="">
+                                <p>Тик</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-materials__premium">
+                        <div class="main-materials__premium-wrapper">
+                            <h3 class="header-container">Премиальные лаки и краски Немецкая и итальянская фурнитура</h3>
+                            <div class="main-materials__premium-container">
+                                <img src="images/woodstock.png" alt="">
+                                <img src="images/bayerlack.png" alt="">
+                                <img src="images/MAM.png" alt="">
+                                <img src="images/brass.png" alt="">
+                                <img src="images/hafele.png" alt="">
+                                <img src="images/agb.png" alt="">
+                                <img src="images/techno_color.png" alt="">
+                                <img src="images/blum.png" alt="">
+                                <img src="images/cisa.png" alt="">
+                                <img src="images/simonwerk.png" alt="">
+                            </div>
+                        </div>
+                        <div class="materials__consult-container">
+                            <div class="new-project reg-form materials__consult">
+                                <div class="new-project__container reg-form__container">
+                                    <div class="new-project__content reg-form__content">
+                                        <h2>Получить консультацию по любым вопросам</h2>
+                                        <p>Оставьте контактный номер и Вам перезвонит наш специалист</p>
+                                        <div class="new-project__data-container">
+                                            <input type="text" class="reg-form__input" placeholder="Ваше имя">
+                                            <input type="text" class="reg-form__input" placeholder="Телефон">
+                                            <button type="button" class="reg-btn">Отправить заявку</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main__our-company">
+                <div class="our-company-wrapper">
+                    <div class="advances">
+                        <h3 class="advances__header header-container" id="scroll-to-company">О нашей компании</h3>
+                        <div class="advances__container">
+                            <div class="advances__about">
+                                <img src="images/corner-left.svg" alt="" id="corner-left">
+                                <p>Компания <span>Русское Ремесло</span> предлагает <span>комплексные услуги по дизайну, проектированию, изготовлению, монтажу</span> иконостасов, алтарей, дверей и всей церковной мебели (утвари), включая <span>восстановление и реставрацию мебели</span> любой сложности.
+                                    <span>Работаем по всей территории России</span> - выезжаем на замеры и монтаж. Выполняем все работы "под ключ" и даем гарантию до 20 лет.
+                                    <br><span>Мы являемся крупнейшим производителем</span> церковной утвари и мебели под заказ с 2002 года.
+                                    У нас нет шаблонных готовых решений - делаем <span>полностью индивидуальные проекты</span>.</p>
+                                <img src="images/corner-right.svg" alt="" id="corner-right">
+                            </div>
+                            <div class="advances__list">
+                                <div class="advances__list-item">
+                                    <div class="advances__list-item-container">
+                                        <div class="advances__list-item-content advances__design">
+                                            <div class="advances__list-item-content-text">
+                                                <h4>Проектирование и дизайн</h4>
+                                                <p>Проектируем и визуализируем церковную мебель и интерьер под ключ, с учетом специфики помещения</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="advances__list-item">
+                                    <div class="advances__list-item-container">
+                                        <div class="advances__list-item-content advances__production">
+                                            <div class="advances__list-item-content-text">
+                                                <h4>Производство</h4>
+                                                <p>Собственное столярное производство полного цикла. Изготовим стеллажи, шкафы и отделку интерьера помещения любой сложности из ценных пород дерева</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="advances__list-item">
+                                    <div class="advances__list-item-container">
+                                        <div class="advances__list-item-content advances__mounting">
+                                            <div class="advances__list-item-content-text">
+                                                <h4>Монтаж под ключ</h4>
+                                                <p>Весь монтаж выполняется силами наших штатных сертифицированных специалистов с опытом более 10 лет.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trust">
+                        <h3 class="header-container">Почему нам доверяют</h3>
+                        <div class="trust__content">
+                            <ul class="trust__list">
+                                <li class="trust__list-item">
+                                    <div class="trust__list-item-content item-more">
+                                        <div class="trust__list-item-content-text">
+                                            <h4>Более</h4>
+                                            <p>17 лет на рынке</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="trust__list-item">
+                                    <div class="trust__list-item-content item-only">
+                                        <div class="trust__list-item-content-text">
+                                            <h4>Только</h4>
+                                            <p>высококачественные и экологичные материалы</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="trust__list-item">
+                                    <div class="trust__list-item-content item-modern">
+                                        <div class="trust__list-item-content-text">
+                                            <h4>Современное</h4>
+                                            <p>импортное оборудование</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="trust__list-item">
+                                    <div class="trust__list-item-content item-own-prod">
+                                        <div class="trust__list-item-content-text">
+                                            <h4>Собственное</h4>
+                                            <p>производство 1500 м2</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="trust__list-item">
+                                    <div class="trust__list-item-content item-creative">
+                                        <div class="trust__list-item-content-text">
+                                            <h4>Творческий</h4>
+                                            <p>подход к каждому проекту</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="trust__list-item">
+                                    <div class="trust__list-item-content item-quality">
+                                        <div class="trust__list-item-content-text">
+                                            <h4>Высокое качество</h4>
+                                            <p>изготавливаемых изделий</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="trust__slider-content">
+                                <div class="swiper trust__slider">
+                                    <div class="swiper-wrapper trust__slider-container">
+                                        <div class="swiper-slide trust__slide">
+                                            <img src="images/trust.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide trust__slide">
+                                            <img src="images/trust.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide trust__slide">
+                                            <img src="images/trust.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-prev trust__slider-arrow-left"></div>
+                                    <div class="swiper-button-next trust__slider-arrow-right"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="production">
+                        <h3 class="header-container" id="scroll-to-production">Возможности нашего производства</h3>
+                        <div class="production__container">
+                            <div class="production__video">
+                                <div class="production__video-container">
+                                    <div class="production__video-play-btn-container">
+                                        <a href="https://www.youtube.com/watch?v=z53UdQf-YYo&ab_channel=BLUME" data-fancybox data-width="95%" data-height="95%">
+                                            <button class="production__video-play-btn">
+                                                <img src="images/btn_play.svg" alt="">
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="production__description">
+                                <div class="production__text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. </p>
+                                    <p>Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.</p>
+                                </div>
+                                <ul class="production__advances">
+                                    <li>
+                                        <h4>1500 м2</h4>
+                                        <p>производственных площадей</p>
+                                    </li>
+                                    <li>
+                                        <h4>560 м2</h4>
+                                        <p>складских площадей</p>
+                                    </li>
+                                    <li>
+                                        <h4>38</h4>
+                                        <p>единиц современного оборудования</p>
+                                    </li>
+                                    <li>
+                                        <h4>56</h4>
+                                        <p>квалифицированных сотрудников</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tools">
+                        <h3 class="header-container">
+                            Парк нашего оборудования
+                        </h3>
+                        <div class="tools__list">
+                            <div class="tools__card card-cpu">
+                                <img src="images/cpu.png" alt="">
+                                <div class="tools__annotation-btn"></div>
+                                <div class="tools__annotation">ЧПУ</div>
+                            </div>
+                            <div class="tools__card card-vacuum">
+                                <img src="images/vaccuum-press.png" alt="">
+                                <div class="tools__annotation-btn"></div>
+                                <div class="tools__annotation">Мембранно-вакуумный пресс</div>
+                            </div>
+                            <div class="tools__card card-reismus">
+                                <img src="images/reismus.png" alt="">
+                                <div class="tools__annotation-btn"></div>
+                                <div class="tools__annotation">Рейсмусовые станки</div>
+                            </div>
+                            <div class="tools__card card-saw">
+                                <img src="images/furniture-saw.png" alt="">
+                                <div class="tools__annotation-btn"></div>
+                                <div class="tools__annotation">Фурнирная пила-гильотина для шпиона</div>
+                            </div>
+                            <div class="tools__card card-hot-press">
+                                <img src="images/hot-press.png" alt="">
+                                <div class="tools__annotation-btn"></div>
+                                <div class="tools__annotation">Горячий гидравлический двухуровневый пресс</div>
+                            </div>
+                            <div class="tools__card card-phugo">
+                                <img src="images/phugo-tool.png" alt="">
+                                <div class="tools__annotation-btn"></div>
+                                <div class="tools__annotation">Фуговальное оборудование</div>
+                            </div>
+                            <div class="tools__card card-kromka">
+                                <img src="images/Oblitsovochniy-tool.png" alt="">
+                                <div class="tools__annotation-btn"></div>
+                                <div class="tools__annotation">Кромкооблицовочное оборудование</div>
+                            </div>
+                            <div class="tools__card card-formatno-raskrkroechniy">
+                                <img src="images/raskroetchniy-tool.png" alt="">
+                                <div class="tools__annotation-btn"></div>
+                                <div class="tools__annotation">Форматно раскроечные станки</div>
+                            </div>
+                            <div class="tools__card card-malyar">
+                                <img src="images/malarnaya-room.png" alt="">
+                                <div class="tools__annotation-btn"></div>
+                                <div class="tools__annotation">Оборудованная малярная камера</div>
+                            </div>
+                            <div class="tools__card card-chlifovalny">
+                                <img src="images/shlifovalniy-stanok.png" alt="">
+                                <div class="tools__annotation-btn"></div>
+                                <div class="tools__annotation">Калибровально шлифовальное оборудование</div>
+                            </div>
+                            <div class="tools__card card-prisadki">
+                                <img src="images/Присадочный-станок.png" alt="">
+                                <div class="tools__annotation-btn"></div>
+                                <div class="tools__annotation">Присадочный станок</div>
+                            </div>
+                            <div class="tools__card card-hydraulic">
+                                <img src="images/hydraulic.png" alt="">
+                                <div class="tools__annotation-btn"></div>
+                                <div class="tools__annotation">Гидравлическая вайма</div>
+                            </div>
+                            <div class="tools__card card-big-shlifovka">
+                                <img src="images/big-shlifovanie.png" alt="">
+                                <div class="tools__annotation-btn"></div>
+                                <div class="tools__annotation">Шлифовальное для больших поверхностей</div>
+                            </div>
+                            <div class="tools__card card-frezer">
+                                <img src="images/frezher.png" alt="">
+                                <div class="tools__annotation-btn"></div>
+                                <div class="tools__annotation">Фрезерное оборудование</div>
+                            </div>
+                        </div>
+                        <div class="tools__new-project">
+                            <div class="new-project reg-form">
+                                <div class="new-project__container reg-form__container">
+                                    <div class="new-project__content reg-form__content">
+                                        <h2>у вас ещё нет проекта?
+                                            мы готовы его разработать.</h2>
+                                        <p>Оставьте контактный номер и Вам перезвонит наш специалист</p>
+                                        <div class="new-project__data-container">
+                                            <input type="text" class="reg-form__input" placeholder="Ваше имя">
+                                            <input type="text" class="reg-form__input" placeholder="Телефон">
+                                            <button type="button" class="reg-btn" id="consult-pop-up-opener">Отправить заявку</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-result">
+                <div class="main-result__quality">
+                    <div class="main-result__quality-wrapper">
+                        <h3 class="header-container">Как мы работаем</h3>
+                        <div class="main-result__quality-container">
+                            <div class="main-result__quality-item item-1">
+                                <span>1</span>
+                                <div>
+                                    <h4>Бесплатно делаем расчет стоимости</h4>
+                                    <p>Консультируем. Даем рекомендации по материалам.</p>
+                                </div>
+                            </div>
+                            <div class="main-result__quality-item item-2">
+                                <span>2</span>
+                                <div>
+                                    <h4>Бесплатно делаем расчет стоимости</h4>
+                                    <p>Консультируем. Даем рекомендации по материалам.</p>
+                                </div>
+                            </div>
+                            <div class="main-result__quality-item item-3">
+                                <span>3</span>
+                                <div>
+                                    <h4>Бесплатно делаем расчет стоимости</h4>
+                                    <p>Консультируем. Даем рекомендации по материалам.</p>
+                                </div>
+                            </div>
+                            <div class="main-result__quality-item item-4">
+                                <span>4</span>
+                                <div>
+                                    <h4>Бесплатно делаем расчет стоимости</h4>
+                                    <p>Консультируем. Даем рекомендации по материалам.</p>
+                                </div>
+                            </div>
+                            <div class="main-result__quality-item item-5">
+                                <span>5</span>
+                                <div>
+                                    <h4>Бесплатно делаем расчет стоимости</h4>
+                                    <p>Консультируем. Даем рекомендации по материалам.</p>
+                                </div>
+                            </div>
+                            <div class="main-result__quality-item item-6">
+                                <span>6</span>
+                                <div>
+                                    <h4>Бесплатно делаем расчет стоимости</h4>
+                                    <p>Консультируем. Даем рекомендации по материалам.</p>
+                                </div>
+                            </div>
+                            <div class="main-result__quality-item item-7">
+                                <span>7</span>
+                                <div>
+                                    <h4>Бесплатно делаем расчет стоимости</h4>
+                                    <p>Консультируем. Даем рекомендации по материалам.</p>
+                                </div>
+                            </div>
+                            <div class="main-result__quality-item item-8">
+                                <span>8</span>
+                                <div>
+                                    <h4>Бесплатно делаем расчет стоимости</h4>
+                                    <p>Консультируем. Даем рекомендации по материалам.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-result__feedback">
+                    <div class="main-result__feedback-wrapper">
+                        <div class="header-container">
+                            <h3>Отзывы клиентов</h3>
+                            <p>Благодарственные письма</p>
+                        </div>
+                        <div class="swiper main-result__feedback-slider">
+                            <div class="swiper-wrapper main-result__feedback-slider-container">
+                                <div class="swiper-slide main-result__exhibition-slider-item">
+                                    <img src="images/response-1.png" alt="">
+                                </div>
+                                <div class="swiper-slide main-result__exhibition-slider-item">
+                                    <img src="images/response-2.png" alt="">
+                                </div>
+                                <div class="swiper-slide main-result__exhibition-slider-item">
+                                    <img src="images/response-3.png" alt="">
+                                </div>
+                                <div class="swiper-slide main-result__exhibition-slider-item">
+                                    <img src="images/response-1.png" alt="">
+                                </div>
+                                <div class="swiper-slide main-result__exhibition-slider-item">
+                                    <img src="images/response-2.png" alt="">
+                                </div>
+                                <div class="swiper-slide main-result__exhibition-slider-item">
+                                    <img src="images/response-3.png" alt="">
+                                </div>
+                                <div class="swiper-slide main-result__exhibition-slider-item">
+                                    <img src="images/response-4.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-result__feedback-slider-arrow-prev arrow-prev swiper-button-prev"></div>
+                        <div class="main-result__feedback-slider-arrow-next arrow-next swiper-button-next"></div>
+                    </div>
+                </div>
+                <div class="main-result__exhibition">
+                    <div class="main-result__exhibition-wrapper">
+                        <div class="header-container">
+                            <h3>Участие в выставках</h3>
+                            <p>Мы постоянные участники международных и российских выставок</p>
+                        </div>
+                        <div class="swiper main-result__exhibition-slider">
+                            <div class="swiper-wrapper main-result__exhibition-slider-container">
+                                <div class="swiper-slide main-result__exhibition-slider-item">
+                                    <img src="images/exhibition-1.png" alt="">
+                                </div>
+                                <div class="swiper-slide main-result__exhibition-slider-item">
+                                    <img src="images/exhibition-2.png" alt="">
+                                </div>
+                                <div class="swiper-slide main-result__exhibition-slider-item">
+                                    <img src="images/exhibition-3.png" alt="">
+                                </div>
+                                <div class="swiper-slide main-result__exhibition-slider-item">
+                                    <img src="images/exhibition-4.png" alt="">
+                                </div>
+                                <div class="swiper-slide main-result__exhibition-slider-item">
+                                    <img src="images/exhibition-1.png" alt="">
+                                </div>
+                                <div class="swiper-slide main-result__exhibition-slider-item">
+                                    <img src="images/exhibition-2.png" alt="">
+                                </div>
+                                <div class="swiper-slide main-result__exhibition-slider-item">
+                                    <img src="images/exhibition-3.png" alt="">
+                                </div>
+                                <div class="swiper-slide main-result__exhibition-slider-item">
+                                    <img src="images/exhibition-4.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-result__exhibition-slider-arrow-prev arrow-prev swiper-button-prev"></div>
+                        <div class="main-result__exhibition-slider-arrow-next arrow-next swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-about_us">
+                <div class="main-about_us__team">
+                    <div class="main-about_us__team-wrapper">
+                        <h3 class="header-container">Наша команда</h3>
+                    </div>
+                    <div class="main-about_us__team-container">
+                        <div class="main-about_us__team-item">
+                            <img src="images/team-1.png" alt="">
+                        </div>
+                        <div class="main-about_us__team-item">
+                            <img src="images/team-2.png" alt="">
+                        </div>
+                        <div class="main-about_us__team-item">
+                            <img src="images/team-3.png" alt="">
+                        </div>
+                        <div class="main-about_us__team-item">
+                            <img src="images/team-4.png" alt="">
+                        </div>
+                        <div class="main-about_us__team-item">
+                            <img src="images/team-5.png" alt="">
+                        </div>
+                        <div class="main-about_us__team-item">
+                            <img src="images/team-6.png" alt="">
+                        </div>
+                        <div class="main-about_us__team-item">
+                            <img src="images/team-7.png" alt="">
+                        </div>
+                        <div class="main-about_us__team-item">
+                            <img src="images/team-8.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="main-about_us__price">
+                    <div class="main-about_us__price-wrapper reg-form">
+                        <div class="main-about_us__price-container reg-form__container">
+                            <div class="main-about_us__price-content reg-form__content">
+                                <h2>Получите бесплатный расчет стоимости</h2>
+                                <p id="fill-form">Заполните форму и мы рассчитаем стоимость изготовления вашего заказа в кратчайшие сроки</p>
+                                <div class="main-about_us__price-content-data">
+                                    <div class="main-about_us__price-content-data-input">
+                                        <input type="text" class="reg-form__input" placeholder="Ваше имя">
+                                        <input type="text" class="reg-form__input" placeholder="Телефон">
+                                        <input type="text" class="reg-form__input" placeholder="E-mail">
+                                    </div>
+                                    <div class="main-about_us__price-content-data-textarea">
+                                        <textarea name="Сообщение" id="message" placeholder="Сообщение"></textarea>
+                                        <div class="main-about_us__price-content-data-textarea-input-container">
+                                            <input type="file" id="reg-form-file-input">
+                                            <label for="reg-form-file-input" id="reg-form-file-input-btn"></label>
+                                            <p id="reg-form-file-input-text">Прикрепите файл с техзаданием</p>
+                                        </div>
+                                        <p>Выберите файл, размер которого не превышает 50 МБ.</p>
+                                    </div>
+                                </div>
+                                <div class="main-about_us__price-content-checkbox">
+                                    <input type="checkbox" id="reg-form-checkbox">
+                                    <label for="reg-form-checkbox"></label>
+                                    <p>Нажимая кнопку "Отправить заявку", я даю согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</p>
+                                </div>
+                                <button>Отправить заявку</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-about_us__contacts">
+                    <div class="main-about_us__contacts-wrapper">
+                        <h3 class="main-about_us__contacts-header header-container" id="scroll-to-contacts">Контакты</h3>
+                        <div class="main-about_us__contacts-content">
+                            <div class="main-about_us__contacts-data">
+                                <div class="main-about_us__contacts-data-container">
+                                    <h4 id="contacts-phone">+7 (495) 104 85 95</h4>
+                                    <p id="contacts-email">zakaz@rusremeslo-hram.ru</p>
+                                    <div id="contacts-address"> <p><span>Адрес производства:</span> <br>
+                                        Западная улица, вл. 1, с. 1 промзона Технопарк M4, рабочий посёлок Горки Ленинские, Ленинский городской округ, Московская область, Россия, 142712</p></div>
+                                    <p id="contacts-time">Пн-Пт 09:00–18:00 <br>
+                                        Сб-Вс - выходной</p>
+                                    <div id="contacts-socials">
+                                        <p>Спрашивайте онлайн:</p>
+                                        <img src="images/whatsup-icon.svg" alt="">
+                                        <img src="images/telegram-icon.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="map" class="main-about_us__contacts-map"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer__wrapper">
+                <div class="footer__summary">
+                    <div class="footer__list about-list">
+                        <h4 class="footer__list-header">О компании</h4>
+                        <h4 class="footer__list-header">Мебельное производство</h4>
+                        <h4 class="footer__list-header">Наши объекты</h4>
+                        <ul class="footer__list-container">
+                            <li class="footer__list-item"><a href="#">Отзывы</a></li>
+                            <li class="footer__list-item"><a href="#">Услуги</a></li>
+                            <li class="footer__list-item"><a href="#">Как заказать</a></li>
+                            <li class="footer__list-item"><a href="#">Цены</a></li>
+                            <li class="footer__list-item"><a href="#">Производство</a></li>
+                            <li class="footer__list-item"><a href="#">Гарантии</a></li>
+                            <li class="footer__list-item"><a href="#">Статьи</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__list main-products-list">
+                        <h4 class="footer__list-header">Иконостасы</h4>
+                        <h4 class="footer__list-header">Царские врата</h4>
+                        <h4 class="footer__list-header">Двери</h4>
+                    </div>
+                    <div class="footer__list cathedrals-list">
+                        <h4 class="footer__list-header">Алтари</h4>
+                        <ul class="footer__list-container">
+                            <li class="footer__list-container-item"><a href="#">Престол</a></li>
+                            <li class="footer__list-container-item"><a href="#">Жертвенник</a></li>
+                            <li class="footer__list-container-item"><a href="#">Трон</a></li>
+                            <li class="footer__list-container-item"><a href="#">Горнее место</a></li>
+                            <li class="footer__list-container-item"><a href="#">Седалище</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__list church-furniture-list-1">
+                        <h4 class="footer__list-header">Церковная мебель</h4>
+                        <ul class="footer__list-container">
+                            <li class="footer__list-item"><a href="#">Аналои</a></li>
+                            <li class="footer__list-item"><a href="#">Киоты навесные</a></li>
+                            <li class="footer__list-item"><a href="#">Киоты напольные</a></li>
+                            <li class="footer__list-item"><a href="#">Стасидии</a></li>
+                            <li class="footer__list-item"><a href="#">Скамьи</a></li>
+                            <li class="footer__list-item"><a href="#">Свечные ящики</a></li>
+                            <li class="footer__list-item"><a href="#">Мощевик / ковчеги</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__list church-furniture-list-2">
+                        <ul class="footer__list-container">
+                            <li class="footer__list-item"><a href="#">Столы крестильные</a></li>
+                            <li class="footer__list-item"><a href="#">Столы литийные</a></li>
+                            <li class="footer__list-item"><a href="#">Кануны</a></li>
+                            <li class="footer__list-item"><a href="#">Гробницы</a></li>
+                            <li class="footer__list-item"><a href="#">Клиросы</a></li>
+                            <li class="footer__list-item"><a href="#">Кресты-голгофы</a></li>
+                            <li class="footer__list-item"><a href="#">Кресты поклонные</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__contact">
+                    <div class="footer__contact-address">
+                        <h4>Контакты</h4>
+                        <p>Западная улица, вл1с1 промзона Технопарк, рабочий посёлок Горки Ленинские, Ленинский городской округ, Московская область, Россия, 142712</p>
+                        <a href="#">Схема проезда</a>
+                    </div>
+                    <div class="footer__contact-logo">
+                        <img src="images/logo.png" alt="">
+                        <p>Художественное православное столярное производство</p>
+                    </div>
+                    <div class="footer__contact-contacts">
+                        <p class="footer__contact-contacts-fw300">Ответим на все ваши вопросы:</p>
+                        <p class="footer__contact-contacts-phone">+7 (495) 104 85 95</p>
+                        <p class="footer__contact-contacts-fw300">Ежедневно с 09:00 до 22:00</p>
+                        <p class="footer__contact-contacts-mail">zakaz@rusremeslo-hram.ru</p>
+                        <div class="footer__contact-ask">
+                            <p>Спрашивайте онлайн:</p>
+                            <img src="images/whatsup-alternate-icon.svg" alt="">
+                            <img src="images/telegram-alternate-icon.svg" alt="">
+                        </div>
+                        <button type="button" id="feedback-pop-up-opener-footer">заказать обратный звонок</button>
+                    </div>
+                </div>
+                <div class="footer__additional">
+                    <div class="footer__additional-container">
+                        <p>© 2010-2023 Все права защищены.</p>
+                        <p>Политика конфиденциальности</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="pop-up__get-consult pop-up" id="consult-pop-up">
+            <div class="get-consult__container">
+                <button class="get-consult__close-btn close-btn" id="get-consult__close-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <path d="M1.15152 26.8484C1.23859 26.9355 1.34199 27.0047 1.4558 27.0519C1.56961 27.099 1.6916 27.1233 1.81481 27.1233C1.93801 27.1233 2.06 27.099 2.17381 27.0519C2.28762 27.0047 2.39102 26.9355 2.47809 26.8484L14 15.3265L25.5265 26.8484C25.7024 27.0243 25.941 27.1231 26.1898 27.1231C26.4386 27.1231 26.6772 27.0243 26.8531 26.8484C27.029 26.6725 27.1278 26.4339 27.1278 26.1851C27.1278 25.9363 27.029 25.6977 26.8531 25.5218L15.3265 13.9999L26.8484 2.47337C27.0243 2.29746 27.1231 2.05887 27.1231 1.81009C27.1231 1.56131 27.0243 1.32272 26.8484 1.14681C26.6725 0.970897 26.4339 0.87207 26.1851 0.87207C25.9363 0.87207 25.6978 0.970897 25.5218 1.14681L14 12.6734L2.4734 1.1515C2.29405 0.997911 2.06336 0.917655 1.82741 0.926769C1.59147 0.935882 1.36765 1.03369 1.20068 1.20066C1.03372 1.36762 0.935909 1.59144 0.926795 1.82739C0.917681 2.06333 0.997937 2.29403 1.15152 2.47337L12.6734 13.9999L1.15152 25.5265C0.976914 25.7022 0.878906 25.9398 0.878906 26.1874C0.878906 26.4351 0.976914 26.6727 1.15152 26.8484Z" fill="#C4C4C4"/>
+                    </svg>
+                </button>
+                <div class="header-container">
+                    <h3>Получить консультацию</h3>
+                    <p>Оставьте контактный номер и Вам перезвонит наш специалист</p>
+                </div>
+                <div class="get-consult__input-data">
+                    <input type="text" class="get-consult__input-name"  placeholder="Ваше Имя">
+                    <input type="text" class="get-consult__input-phone" placeholder="Телефон">
+                    <button class="get-consult__input-send">Отправить заявку</button>
+                </div>
+                <div class="get-consult__agreement">
+                    <input type="checkbox" id="pop-up-consult-checkbox" class="pop-up-consult-checkbox">
+                    <label for="pop-up-consult-checkbox"></label>
+                    <p>Нажимая кнопку "Отправить заявку", я даю согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</p>
+                </div>
+            </div>
+        </div>
+        <div class="pop-up__feedback pop-up" id="feedback-pop-up">
+            <div class="feedback__container">
+                <button class="feedback__close-btn close-btn" id="feedback__close-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <path d="M1.15152 26.8484C1.23859 26.9355 1.34199 27.0047 1.4558 27.0519C1.56961 27.099 1.6916 27.1233 1.81481 27.1233C1.93801 27.1233 2.06 27.099 2.17381 27.0519C2.28762 27.0047 2.39102 26.9355 2.47809 26.8484L14 15.3265L25.5265 26.8484C25.7024 27.0243 25.941 27.1231 26.1898 27.1231C26.4386 27.1231 26.6772 27.0243 26.8531 26.8484C27.029 26.6725 27.1278 26.4339 27.1278 26.1851C27.1278 25.9363 27.029 25.6977 26.8531 25.5218L15.3265 13.9999L26.8484 2.47337C27.0243 2.29746 27.1231 2.05887 27.1231 1.81009C27.1231 1.56131 27.0243 1.32272 26.8484 1.14681C26.6725 0.970897 26.4339 0.87207 26.1851 0.87207C25.9363 0.87207 25.6978 0.970897 25.5218 1.14681L14 12.6734L2.4734 1.1515C2.29405 0.997911 2.06336 0.917655 1.82741 0.926769C1.59147 0.935882 1.36765 1.03369 1.20068 1.20066C1.03372 1.36762 0.935909 1.59144 0.926795 1.82739C0.917681 2.06333 0.997937 2.29403 1.15152 2.47337L12.6734 13.9999L1.15152 25.5265C0.976914 25.7022 0.878906 25.9398 0.878906 26.1874C0.878906 26.4351 0.976914 26.6727 1.15152 26.8484Z" fill="#C4C4C4"/>
+                    </svg>
+                </button>
+                <div class="header-container">
+                    <h3>Заказать обратный звонок</h3>
+                    <p>Оставьте контактный номер и Вам перезвонит наш специалист</p>
+                </div>
+                <div class="feedback__input-data">
+                    <input type="text" class="get-consult__input-name"  placeholder="Ваше Имя">
+                    <input type="text" class="get-consult__input-phone" placeholder="Телефон">
+                    <button class="feedback__input-send">Отправить заявку</button>
+                </div>
+                <div class="feedback__agreement">
+                    <input type="checkbox" id="pop-up-feedback-checkbox" class="pop-up-consult-checkbox">
+                    <label for="pop-up-feedback-checkbox"></label>
+                    <p>Нажимая кнопку "Отправить заявку", я даю согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</p>
+                </div>
+            </div>
+        </div>
+        <button class="scroll-up"></button>
+    </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="node_modules/mixitup/dist/mixitup.js"></script>
+<script src="src/scroller.js"></script>
+<script src="src/pop_ups.js"></script>
+<script src="src/file-upload.js"></script>
+<script src="src/sliders.js"></script>
+<script src="src/mixer.js"></script>
+</body>
+</html>

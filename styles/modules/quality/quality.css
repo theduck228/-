@@ -1,0 +1,10 @@
+.main-result {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.main-result__quality {
+  width: 100%;
+  background: #000;
+}
+/*# sourceMappingURL=quality.css.map */

@@ -1,0 +1,134 @@
+.main-catalog{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: @bg_color-beige;
+  width: 100%;
+  &__head-product{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    &-header{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &:after{
+        content: url("../images/page-decor-line-alternate.png");
+      }
+    }
+    &-container{
+      display: grid;
+      grid-template-columns: 63% 30.5%;
+      grid-template-rows: 100%;
+      justify-content: space-between;
+      grid-gap: 30px;
+    }
+  }
+  &__altar{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    &-container{
+      display: grid;
+      width: 80%;
+      gap: 30px;
+      grid-template-rows: 45% 45%;
+      grid-template-columns: 32% 32% 32%;
+      .com-table{
+        grid-column: span 1 / 4 ;
+        grid-row: span 2 / 2;
+      }
+    }
+  }
+  &__doors{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    &-container{
+      display: grid;
+      width: 80%;
+      gap: 30px;
+      grid-template-rows: 50% 50%;
+      grid-template-columns: 32% 32% 32%;
+      .door-1{
+        grid-column: span 1 / 2 ;
+        grid-row: span 2 / 2;
+      }
+    }
+  }
+  &__church-furniture{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 100px;
+    &-container{
+      display: grid;
+      width: 80%;
+      gap: 30px;
+      grid-template-rows: repeat(7, 1fr);
+      grid-template-columns: repeat(6, 1fr);
+      .lectern{
+        grid-area: 1 / 1 / 4 / 4;
+      }
+      .icon-case{
+        grid-area: 1 / 4 / 4 / 7;
+      }
+      .stasidia{
+        grid-area: 4 / 1 / 6 / 3;
+      }
+      .bench{
+        grid-area: 4 / 3 / 6 / 5;
+      }
+      .candle-box{
+        grid-area: 4 / 5 / 6 / 7;
+      }
+      .reliquary{
+        grid-area: 6 / 1 / 8 / 3;
+      }
+      .cabinets{
+        grid-area: 6 / 3 / 8 / 5;
+      }
+      .eves{
+        grid-area: 6 / 5 / 8 / 7;
+      }
+      .tombs{
+        grid-area: 8 / 1 / 10 / 3;
+      }
+      .others{
+        grid-area: 8 / 3 / 10 / 5;
+      }
+      .crosses{
+        grid-area: 8 / 5 / 10 / 7;
+      }
+    }
+  }
+}
+
+.catalog-card {
+  display: flex;
+  flex-direction: column;
+
+  p {
+    background-color: @bg_color-white;
+    margin: 0;
+    text-align: center;
+    height: 25px;
+    padding: 20px 0;
+    border-radius: 0 0 18px 18px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 120%;
+    font-variant-numeric: lining-nums tabular-nums;
+    color: @text_color;
+  }
+
+  img {
+    width: 100%;
+  }
+}

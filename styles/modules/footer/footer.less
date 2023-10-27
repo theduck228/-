@@ -1,0 +1,159 @@
+footer{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: @bg_color-white;
+  .footer{
+    &__wrapper{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      margin-top: 60px;
+    }
+    &__summary{
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      gap: 20px;
+      margin-bottom: 150px;
+    }
+    &__list{
+      display: flex;
+      flex-direction: column;
+      &-header{
+        margin: 0 0 10px 0;
+        font-weight: 500;
+        line-height: 150%;
+        text-transform: uppercase;
+        letter-spacing: -0.6px;
+      }
+      &-container{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        gap: 10px;
+        a{
+          text-decoration: none;
+          color: @main_color;
+          font-weight: 300;
+          line-height: 160%;
+          font-size: 16px;
+        }
+      }
+    }
+    &__contact{
+      display: flex;
+      width: 80%;
+      justify-content: space-between;
+      padding-top: 35px;
+      margin-bottom: 80px;
+      margin-top: 60px;
+      border-top: 1px solid rgba(65, 45, 30, 0.10);
+      &-address{
+        width: 20%;
+        h4{
+          font-weight: 500;
+        }
+        p{
+          width: 100%;
+          font-weight: 300;
+          line-height: 140%;
+        }
+        a:any-link{
+          color: @main_color;
+          font-weight: 300;
+          line-height: 140%;
+        }
+      }
+      &-logo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p{
+          text-align: center;
+          font-size: 14px;
+          line-height: 120%;
+          color: @text_color;
+          width: 80%;
+        }
+      }
+      &-contacts{
+        margin-top: 0;
+        margin-bottom: 5px;
+        p{
+          margin-top: 0;
+          margin-bottom: 10px;
+          font-size: 13px;
+        }
+        &-fw300{
+          font-weight: 300;
+        }
+        &-phone{
+          font-size: 24px !important;
+          font-weight: 600;
+        }
+        &-mail{
+          font-weight: 500;
+          text-transform: uppercase;
+        }
+      }
+      &-ask{
+        display: flex;
+        gap: 10px;
+        justify-content: space-evenly;
+        align-items: end;
+        margin-bottom: 10px;
+        p{
+          display: flex;
+          gap: 5px;
+          font-size: 12px;
+          font-weight: 300;
+          justify-content: end;
+          &:before{
+            content: "";
+            background-color: @green_before;
+            width: 6px;
+            height: 6px;
+            border-radius: 4px;
+            margin-top: 4px;
+          }
+        }
+      }
+      button{
+        height: 44px;
+        color: #dcbda1;
+        border: 1px solid #DCBDA1;
+        border-radius: 40px;
+        padding: 10px 14px;
+        background-color: transparent;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 150%;
+        margin-top: 20px;
+      }
+    }
+    &__additional{
+      height: 80px;
+      background-color: @main_color;
+      width: 100%;
+      color: @bg_color-white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &-container{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        p{
+          font-weight: 300;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+.church-furniture-list-2{
+  margin-top: 39px;
+}
