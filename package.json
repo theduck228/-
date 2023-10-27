@@ -9,9 +9,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-sass": "^5.1.0",
     "mixitup": "^3.3.1"
   },
   "dependencies": {
-    "@fancyapps/ui": "^5.0.24"
+    "@fancyapps/ui": "^5.0.24",
+    "gulp": "^4.0.2"
   }
 }
